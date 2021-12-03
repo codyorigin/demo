@@ -21,6 +21,8 @@
 		3773E29B275A4F700070E2D5 /* MeetingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773E29A275A4F700070E2D5 /* MeetingPageView.swift */; };
 		3773E29E275A50B00070E2D5 /* NumberBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773E29D275A50B00070E2D5 /* NumberBadge.swift */; };
 		3773E2A2275A56020070E2D5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773E2A1275A56020070E2D5 /* Category.swift */; };
+		3773E2A5275A64840070E2D5 /* CategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773E2A4275A64840070E2D5 /* CategoryGridView.swift */; };
+		3773E2A8275A64C90070E2D5 /* CategoryGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773E2A7275A64C90070E2D5 /* CategoryGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		3773E29A275A4F700070E2D5 /* MeetingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingPageView.swift; sourceTree = "<group>"; };
 		3773E29D275A50B00070E2D5 /* NumberBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberBadge.swift; sourceTree = "<group>"; };
 		3773E2A1275A56020070E2D5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		3773E2A4275A64840070E2D5 /* CategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGridView.swift; sourceTree = "<group>"; };
+		3773E2A7275A64C90070E2D5 /* CategoryGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,8 @@
 		3773E29F275A55C00070E2D5 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				3773E2A6275A64B70070E2D5 /* viewmodel */,
+				3773E2A3275A64640070E2D5 /* view */,
 				3773E2A0275A55F10070E2D5 /* model */,
 			);
 			path = category;
@@ -202,6 +208,22 @@
 				3773E2A1275A56020070E2D5 /* Category.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		3773E2A3275A64640070E2D5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3773E2A4275A64840070E2D5 /* CategoryGridView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3773E2A6275A64B70070E2D5 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				3773E2A7275A64C90070E2D5 /* CategoryGrid.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3773E29E275A50B00070E2D5 /* NumberBadge.swift in Sources */,
+				3773E2A8275A64C90070E2D5 /* CategoryGrid.swift in Sources */,
 				3773E29B275A4F700070E2D5 /* MeetingPageView.swift in Sources */,
 				3773E297275A4E750070E2D5 /* MeetingList.swift in Sources */,
 				3773E293275A4E310070E2D5 /* Message.swift in Sources */,
@@ -342,6 +365,7 @@
 				3773E2A2275A56020070E2D5 /* Category.swift in Sources */,
 				3773E263275A4C8A0070E2D5 /* demoApp.swift in Sources */,
 				3773E299275A4F340070E2D5 /* MessageList.swift in Sources */,
+				3773E2A5275A64840070E2D5 /* CategoryGridView.swift in Sources */,
 				3773E295275A4E510070E2D5 /* MeetingTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
