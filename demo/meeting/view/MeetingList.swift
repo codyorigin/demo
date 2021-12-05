@@ -76,7 +76,7 @@ struct MeetingCellView: View {
             }
             
         }
-//        .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10))
+//        .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
 //        .onTapGesture {
 //            print("chosen")
 //        }
@@ -98,15 +98,15 @@ struct MeetingCellView: View {
     @ViewBuilder
     private func contentBar(_ meeting:Meeting) -> some View {
         VStack {
-            Text(meeting.name).font(.headline).font(.subheadline).frame(width: 190, height: 25, alignment: .leading)
-            Text(meeting.lastMessage()).font(.subheadline).frame(width: 190, height: 35, alignment: .leading)
+            Text(meeting.name).font(.headline).font(.subheadline).frame(width: 170, height: 25, alignment: .leading)
+            Text(meeting.lastMessage()).font(.subheadline).frame(width: 170, height: 35, alignment: .leading)
         }
     }
     
     @ViewBuilder
     private func sidebar(_ meeting:Meeting) -> some View {
         VStack {
-            Text(Date(), style: .time).font(.subheadline).frame(width: 80, height: 25, alignment: .leading)
+            Text(Date(), style: .time).font(.subheadline).frame(width: 80, height: 25, alignment: .trailing)
             
         }
     }

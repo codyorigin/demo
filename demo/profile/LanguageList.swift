@@ -10,25 +10,29 @@ import SwiftUI
 struct LanguageList: View {
     
     let languages = ["English", "Chinese"]
-    @State var selectedLanguage: String? = nil
+    @State var selectedLanguage: String = "English"
+    @State var lang: String = "en"
     
     var body: some View {
-
-        self.navigationTitle("")
-        self.navigationBarHidden(true)
         
+        VStack{
+            
+            Text("Dynamic Language Change").environment(\.locale, .init(identifier: lang))
+
             List {
                 ForEach(languages, id: \.self) { item in
-                    SelectionCell(language: item, selectedLanguage: self.$selectedLanguage)
+                    SelectionCell(language: item, selectedLanguage: self.$selectedLanguage, lang: self.$lang)
                 }
             }
         }
+    }
 }
 
 struct SelectionCell: View {
 
     let language: String
-    @Binding var selectedLanguage: String?
+    @Binding var selectedLanguage: String
+    @Binding var lang: String
 
     var body: some View {
         HStack {
@@ -39,8 +43,13 @@ struct SelectionCell: View {
                     .foregroundColor(.accentColor)
             }
         }.onTapGesture {
-                self.selectedLanguage = self.language
+            self.selectedLanguage = self.language
+            if self.language == "English" {
+                self.lang = "en"
+            }else{
+                self.lang = "zh-Hans"
             }
+        }
     }
 }
 

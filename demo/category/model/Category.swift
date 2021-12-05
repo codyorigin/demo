@@ -7,26 +7,25 @@
 
 import Foundation
 
-enum CategoryLevel{
+enum CategoryLevel: String, Decodable {
     
     case zero
     case one
     case two
 }
 
-struct Category: Identifiable {
+struct Category: Identifiable, Decodable {
     
     var id: Int64
     var name: String
-    var title: String
     var level: CategoryLevel
     var image:String
 }
 
 struct CategoryArray {
-    var categories: Array<Category>
+    var categories:Array<Category> = [Category]()
     
     mutating func choose(category: Category) {
-        print("category choose \(category)")
+        print("Choose \(category)")
     }
 }

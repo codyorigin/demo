@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Animal",
+        "level": "one",
+        "image": "sun.max.fill"
+    },
+    {
+        "id": 2,
+        "name": "Art & Craft",
+        "level": "one",
+        "image": "sun.min.fill"
+    },
+    {
+        "id": 3,
+        "name": "Baby",
+        "level": "one",
+        "image": "sun.dust"
+    },
+    {
+        "id": 4,
+        "name": "Gift Cards",
+        "level": "one",
+        "image": "sun.haze"
+    },
+    {
+        "id": 5,
+        "name": "Clothing",
+        "level": "one",
+        "image": "cloud.sun"
+    }
+]

@@ -7,6 +7,15 @@
 */
 
 "home" = "Home";
+"category" = "Category";
 "profile" = "Profile";
 
 "meeting_title" = "Meeting";
+
+"Animal" = "Animal";
+"Art & Craft" = "Art & Craft";
+"Baby" = "Baby";
+"Gift Cards" = "Gift Cards";
+"Clothing" = "Clothing";
+
+"Dynamic Language Change" = "Dynamic Language Change";

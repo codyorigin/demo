@@ -23,15 +23,23 @@ struct ContentView: View {
                     Text("home")
                 }
                 .tag(0)
-//                .navigationBarTitle("home").navigationBarHidden(false)
+                
+                CategoryGridView()
+                .tabItem {
+                    Image(systemName: "square.grid.3x3")
+                    Text("category")
+                }
+                .tag(1)
+                .navigationBarTitle("").navigationBarHidden(true)
+                
          
                 LanguageList()
                     .tabItem {
                         Image(systemName: "person.crop.circle")
                         Text("profile")
                     }
-                .tag(1)
-//                .navigationBarTitle("").navigationBarHidden(true)
+                .tag(2)
+                .navigationBarTitle("").navigationBarHidden(true)
                 
             }.navigationBarHidden(true)
             .accentColor(.red)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryGridView: View {
     
-    @ObservedObject var categoryGrid: CategoryGrid
+    @ObservedObject var categoryGrid: CategoryGrid = CategoryGrid()
     
     var columns: [GridItem] {
         [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
@@ -19,14 +19,20 @@ struct CategoryGridView: View {
         
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(categoryGrid.categories.indices) { index in
-                        
-                        CategoryCardView(category: categoryGrid.categories[index])
+                    
+                    ForEach(categoryGrid.categories.indices, id: \.self) { index in
+
+                        CategoryCardView(category: categoryGrid.categories[index]).onTapGesture {
+                            categoryGrid.choose(categoryGrid.categories[index])
+                        }
                     }
+                    
                 }.padding(.horizontal)
-            }
+            }.onAppear{categoryGrid.fetch()}
     }
+    
 }
+
 
 struct CategoryCardView: View {
     var category: Category
@@ -41,18 +47,13 @@ struct CategoryCardView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 80, height: 80).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
             
-            Text(category.title).font(.caption).font(.subheadline).frame(width: 80, height: 22)
+            Text(LocalizedStringKey(category.name)).font(.caption).font(.subheadline).frame(width: 80, height: 22)
         }.padding(5).background(Color.white)
     }
 }
 
 struct CategoryGridView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryGridView(categoryGrid: getCategoryGrid())
-    }
-    
-    static func getCategoryGrid() -> CategoryGrid {
-        let category = Category(id: 1, name: "name", title: "title", level: .one, image: "sun.max.fill")
-        return CategoryGrid(categories: [category,category,category, category])
+        CategoryGridView()
     }
 }

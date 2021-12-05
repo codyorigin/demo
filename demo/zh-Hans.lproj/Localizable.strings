@@ -7,6 +7,15 @@
 */
 
 "home" = "首页";
+"category" = "分类";
 "profile" = "我的";
 
 "meeting_title" = "会议";
+
+"Animal" = "动物";
+"Art & Craft" = "工艺品";
+"Baby" = "婴儿";
+"Gift Cards" = "礼品卡";
+"Clothing" = "衣服";
+
+"Dynamic Language Change" = "动态语言改变";
