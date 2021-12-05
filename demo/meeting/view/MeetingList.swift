@@ -24,7 +24,7 @@ struct MeetingList: View {
             ForEach(meetings) { meeting in
                 
                 
-                NavigationLink(destination: MessageList().navigationTitle(meeting.name)){
+                NavigationLink(destination: MessageList(messages: meeting.messages).navigationBarTitleDisplayMode(.inline).navigationTitle(meeting.name)){
                     
                     MeetingCellView(meeting: meeting).environmentObject(meetingTable).onTapGesture {
                         meetingTable.choose(meeting)
@@ -77,9 +77,9 @@ struct MeetingCellView: View {
             
         }
 //        .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10))
-        .onTapGesture {
-            print("chosen")
-        }
+//        .onTapGesture {
+//            print("chosen")
+//        }
     }
     
     @ViewBuilder
@@ -106,7 +106,7 @@ struct MeetingCellView: View {
     @ViewBuilder
     private func sidebar(_ meeting:Meeting) -> some View {
         VStack {
-            Text(Date(), style: .time).font(.subheadline).frame(width: 80, height: 25, alignment: .trailing)
+            Text(Date(), style: .time).font(.subheadline).frame(width: 80, height: 25, alignment: .leading)
             
         }
     }

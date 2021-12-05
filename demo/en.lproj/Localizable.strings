@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  demo
+
+  Created by cody on 12/5/21.
+  
+*/
+
+"home" = "Home";
+"profile" = "Profile";
+
+"meeting_title" = "Meeting";
